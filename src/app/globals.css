@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* === SHADCN/NEOBRUTALISM BASE === */
+    --background: 50 100% 97%;
+    --foreground: 0 0% 0%;
+    --card: 220 13% 10%;
+    --card-foreground: 0 0% 100%;
+    --popover: 50 100% 97%;
+    --popover-foreground: 0 0% 0%;
+    --secondary-background: 30 100% 97%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 220 10% 40%;
+    --muted-foreground: 220 10% 60%;
+    --accent: 30 50% 90%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 10% 20%;
+    --input: 0 0% 100%;
+    --ring: 0 0% 0%;
+    --radius: 6px;
+    
+    /* === PRIMARY ACCENT (Monad Purple/Violet) === */
+    --main: 270 91% 65%;
+    --main-foreground: 0 0% 100%;
+    
+    /* === GAME DESIGN SYSTEM === */
+    --color-bg-dark: #0a0a0f;
+    --color-bg-card: #111116;
+    --color-bg-elevated: #1a1a22;
+    --color-border-subtle: #27272a;
+    
+    /* Primary Accent - Monad Purple/Violet */
+    --color-primary: #836EF9;
+    --color-primary-hover: #9D8DFA;
+    --color-primary-dark: #6B4EF7;
+    
+    /* Secondary - Monad Accent (lighter violet) */
+    --color-purple: #836EF9;
+    --color-purple-dark: #6B4EF7;
+    --color-purple-light: #B8ACFC;
+    
+    /* Monad Brand Colors */
+    --color-monad: #836EF9;
+    --color-monad-light: #B8ACFC;
+    --color-monad-dark: #5B3CF5;
+    
+    /* Semantic Colors */
+    --color-success: #22C55E;
+    --color-danger: #EF4444;
+    --color-warning: #F97316;
+    
+    /* Legacy (keeping for compatibility) */
+    --color-lime: #836EF9;
+    --color-yellow: #B8ACFC;
+    
+    /* Text */
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #A1A1AA;
+    --color-text-muted: #71717A;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-primary);
+    font-feature-settings: "ss01", "ss02", "cv01";
+    @apply antialiased;
+  }
+
+  .bg-grid {
+    background-image: 
+      linear-gradient(rgba(131, 110, 249, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(131, 110, 249, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+@layer components {
+  .game-card {
+    @apply border-2 rounded-xl;
+    background-color: var(--color-bg-card);
+    border-color: var(--color-primary);
+  }
+
+  .game-input {
+    @apply w-full px-4 py-2.5 text-sm font-medium rounded-md outline-none transition-colors;
+    background-color: var(--color-bg-elevated);
+    border: 2px solid var(--color-border-subtle);
+    color: white;
+  }
+
+  .game-input:focus {
+    border-color: var(--color-primary);
+  }
+
+  .game-input::placeholder {
+    color: var(--color-text-muted);
+  }
+
+  .btn-game {
+    @apply px-4 py-2.5 font-semibold rounded-md transition-all;
+    @apply border-2 border-black shadow-brutal;
+    @apply hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none;
+  }
+}
+
+@layer utilities {
+  .text-success { color: var(--color-success); }
+  .text-danger { color: var(--color-danger); }
+  .text-muted { color: var(--color-text-muted); }
+  .text-secondary { color: var(--color-text-secondary); }
+  .text-primary-accent { color: var(--color-primary); }
+  .bg-game-card { background-color: var(--color-bg-card); }
+  .bg-game-elevated { background-color: var(--color-bg-elevated); }
+  .bg-primary { background-color: var(--color-primary); }
+  .bg-lime { background-color: var(--color-primary); }
+  .border-purple { border-color: var(--color-purple); }
+  .border-subtle { border-color: var(--color-border-subtle); }
+  .border-primary { border-color: var(--color-primary); }
+}
