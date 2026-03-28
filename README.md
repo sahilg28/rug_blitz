@@ -70,66 +70,9 @@ Track stats, compete for highest multipliers, climb global rankings.
 
 ## 🔗 Deployed Contract
 
-**Monad Testnet:** `[DEPLOY_ADDRESS]`
+**Monad Testnet:** `[0xf7508502e21A4D0256A0362ccF6733a122940f0d]`
 
 [View on Monad Explorer →](https://testnet.monadscan.com/address/[DEPLOY_ADDRESS])
 
 ---
 
-## 🚀 Quick Start
-
-```bash
-# Install dependencies
-npm install
-
-# Run locally
-npm run dev
-
-# Deploy contract to Monad Testnet
-# First add DEPLOYER_PRIVATE_KEY to .env.local
-npm run compile
-npm run deploy
-```
-
----
-
-## 📦 Contract Deployment
-
-1. Add your deployer private key to `.env.local`:
-   ```
-   DEPLOYER_PRIVATE_KEY=0x...
-   ```
-
-2. Compile and deploy:
-   ```bash
-   npm run compile
-   npm run deploy
-   ```
-
-3. Update the contract address in:
-   - `.env.local` → `NEXT_PUBLIC_CONTRACT_ADDRESS`
-   - `src/config/chains.ts` → `CONTRACT_ADDRESSES.doorRunner`
-
-4. Fund the house by sending MON to the contract
-
----
-
-## 🎯 Why Monad?
-
-- **Parallel Execution** — 10,000 TPS for instant gameplay
-- **EVM Compatible** — Deploy existing Solidity contracts
-- **Low Latency** — Sub-second finality for real-time gaming
-- **Growing Ecosystem** — Part of the high-performance blockchain future
-
----
-
-## 👥 Team
-
-**Sahil Gupta** — Full Stack Developer  
-**Abhishek Vishwakarma** — Smart Contract & Backend
-
----
-
-<p align="center">
-  <b>⚡ Ship fast. Don't get rugged. 🚪💰</b>
-</p>
